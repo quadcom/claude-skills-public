@@ -1,0 +1,4 @@
+# A shell script with CRLF line endings fails on Linux and macOS with
+# "bad interpreter: /usr/bin/env bash^M". Force LF regardless of the
+# cloning machine.
+*.sh text eol=lf
