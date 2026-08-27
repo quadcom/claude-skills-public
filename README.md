@@ -33,6 +33,24 @@ configured says so rather than falling back to another project's board.
 
 Requires `bash` and `curl`. No other dependencies.
 
+### `devbanner`
+
+Puts a "development branch — do not install from here" warning into `README.md` on a project's
+development branch, so nobody installs from work in progress. The banner is ordinary committed
+content, not something stamped on every merge — this skill exists for the two moments that is not
+enough: it went missing, or its wording changed.
+
+The wording lives in one place, `banner.md`, and the skill never retypes it. The link back to the
+published branch is **relative**, so the banner names no repository and works unchanged in any
+project, including forks.
+
+Written for the common `dev` → `main` pair; substitute your own branch names, which the skill says
+how to do. It reads and preserves an existing marker prefix, so adopting it will not break a project
+that already uses a prefixed form such as `<!-- myproject:dev-banner -->`.
+
+Pairs with a `cleanreadme` skill that removes the same block from the published branch. That one is
+not published here yet; without it, removal is a hand edit.
+
 ## Writing your own
 
 One folder per skill, holding `SKILL.md` with YAML frontmatter:
