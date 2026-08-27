@@ -48,8 +48,20 @@ Written for the common `dev` → `main` pair; substitute your own branch names, 
 how to do. It reads and preserves an existing marker prefix, so adopting it will not break a project
 that already uses a prefixed form such as `<!-- myproject:dev-banner -->`.
 
-Pairs with a `cleanreadme` skill that removes the same block from the published branch. That one is
-not published here yet; without it, removal is a hand edit.
+### `cleanreadme`
+
+The other half of `devbanner`: removes the warning block from `README.md` on the published branch,
+normally straight after a merge from the development branch lands.
+
+Most runs find nothing to do, and that is the expected result — git remembers the deliberate
+deletion, so the banner does not creep back on ordinary merges. The skill earns its keep in the case
+that does bite: a README merge conflict, where the sensible resolution takes the development
+branch's copy of the file whole and carries the banner across with it. The conflict table in the
+skill records which edits provoke that, measured in a scratch repository rather than reasoned about.
+
+It matches the same markers as `devbanner`, prefixed or bare, and refuses to work on any branch but
+the published one — the one mistake it could make that cannot be undone from the other branch is
+stripping the banner off the development branch.
 
 ## Writing your own
 
