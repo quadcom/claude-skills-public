@@ -63,6 +63,20 @@ It matches the same markers as `devbanner`, prefixed or bare, and refuses to wor
 the published one — the one mistake it could make that cannot be undone from the other branch is
 stripping the banner off the development branch.
 
+### `readme-writer`
+
+Writes or rewrites a project's `README.md` as a front page rather than a manual: what it is, who it
+helps, and how to get it running in a minute, with the dense technical material pushed to the
+bottom where it belongs.
+
+Its first instruction is to read the project — manifest, entry point, config, tests — before writing
+a line, because the failure mode of an AI-written README is a confident description of software that
+does not exist. Its last is to prove every command runs as written from a clean clone, since a wrong
+install command breaks the reader's very first act.
+
+Also carries a list of the words that make writing read as machine-generated, and the test that
+matters more than the list: if deleting the adjective loses no information, it was decoration.
+
 ## Writing your own
 
 One folder per skill, holding `SKILL.md` with YAML frontmatter:
