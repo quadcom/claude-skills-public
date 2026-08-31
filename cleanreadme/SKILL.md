@@ -5,7 +5,7 @@ description: Remove the development-branch warning banner from README.md on the 
 
 # cleanreadme
 
-`dev` carries a "development branch — do not install from here" banner in its README as ordinary
+`dev` carries a development-branch warning banner in its README as ordinary
 committed content. `main` must never show it. Work merges one way, `dev` → `main`, so the one moment
 the banner is wrong is immediately after that merge lands. This skill removes it.
 

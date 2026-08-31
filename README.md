@@ -35,8 +35,9 @@ Requires `bash` and `curl`. No other dependencies.
 
 ### `devbanner`
 
-Puts a "development branch — do not install from here" warning into `README.md` on a project's
-development branch, so nobody installs from work in progress. The banner is ordinary committed
+Puts a "development branch — the bleeding edge, not the stable release" warning into `README.md` on
+a project's development branch, so nobody installs work in progress by accident and anybody who wants
+it early knows what they are taking. The banner is ordinary committed
 content, not something stamped on every merge — this skill exists for the two moments that is not
 enough: it went missing, or its wording changed.
 
