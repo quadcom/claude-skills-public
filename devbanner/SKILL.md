@@ -1,6 +1,6 @@
 ---
 name: devbanner
-description: Put a "development branch — do not install from here" warning banner into README.md on the development branch, or bring its wording up to date. Use when the user says "devbanner", or when the development branch's README has lost the banner or shows an old version of it.
+description: Put a "development branch — the bleeding edge, not the stable release" warning banner into README.md on the development branch, or bring its wording up to date. Use when the user says "devbanner", or when the development branch's README has lost the banner or shows an old version of it.
 ---
 
 # devbanner
@@ -44,7 +44,7 @@ git branch --show-current
 - **If it is not the development branch, do not edit a single file in this folder.** Stop, and
   either add a throwaway worktree on it (`git worktree add <scratch>/devbanner dev`) and work there,
   or say why you cannot and stop. **Never switch this folder's branch.** The failure this gate
-  prevents is stamping the banner onto the published branch, which puts a "do not install from here"
+  prevents is stamping the banner onto the published branch, which puts a "this is the bleeding edge"
   warning on the project's public front page.
 - **Confirm the same thing again inside the worktree** if you made one. A worktree that failed to
   create leaves you standing in the original folder.
